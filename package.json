@@ -4,7 +4,7 @@
   "description": "A node module for creating a tree from text input",
   "main": "freetree.js",
   "scripts": {
-    "test": "node freetree.js"
+    "test": "mocha ./test/freetreeTest.js"
   },
   "repository": {
     "type": "git",
