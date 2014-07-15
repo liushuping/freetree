@@ -1,0 +1,26 @@
+{
+  "name": "freetree",
+  "version": "0.1.0",
+  "description": "A node module for creating a tree from text input",
+  "main": "freetree.js",
+  "scripts": {
+    "test": "node freetree.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liushuping/freetree"
+  },
+  "keywords": [
+    "tree",
+    "text",
+    "structure",
+    "javascript",
+    "node"
+  ],
+  "author": "Shuping LIU",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/liushuping/freetree/issues"
+  },
+  "homepage": "https://github.com/liushuping/freetree"
+}
