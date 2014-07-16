@@ -7,10 +7,10 @@ This module takes a tree structured input string and build a JavaScript tree obj
 
 A simple tree structured input string (input.txt) example:
 ```
-\#root node
-\##node1
-\###node11
-\##node2
+#root node
+##node1
+###node11
+##node2
 ```
 It illustrates a tree as below:
 ```
@@ -22,7 +22,7 @@ root node
 ## Conventions
 Each line represents a node in the tree, it should begins with the leading character (default is \#). The count of leading chracters minus 1 is the level of the node. There should be only 1 root node which has only 1 leading character, and it should be in the first line of the input string.
 ## Code examples
-Prepare an input.txt file as above demonstrated.
+Prepare an `input.txt` file as above demonstrated.
 ```JavaScript
 var fs = require('fs');
 var freetree = require('freetree');
