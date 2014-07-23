@@ -27,9 +27,8 @@ Each line represents a node in the tree, it should begins with the leading chara
 var freetree = require('freetree');
 var tree = freetree.parse(str, settings);
 ```
-**`settings`**
-it has below listed properties
-* `leadingChar`: optional, define leading character for the tree, defaulted to '#' 
+**`settings`** has below listed properties
+* `leadingChar`: optional, defines leading character for the tree, defaulted to '#' 
 
 ## Code examples
 Prepare an `input.txt` file as above demonstrated.
