@@ -26,4 +26,22 @@ describe('#parse', function() {
 	assert.ok(tree.nodes.length == 2);
 	assert.ok(tree.nodes[0].nodes[0].value == '123');
     });
+
+    it('should parse 2 level tree with custom leading character', function() {
+	var str = '@abc\r\n@@def\r\n@@@123\r\n@@xyz';
+	var tree = freetree.parse(str, {leadingChar: '@'});
+        assert.ok(tree.level == 0);
+	assert.ok(tree.value == 'abc');
+	assert.ok(tree.nodes.length == 2);
+	assert.ok(tree.nodes[0].nodes[0].value == '123');
+    });
+
+    it('should parse 2 level tree with regular expression control character as leading character', function() {
+	var str = '*abc\r\n**def\r\n***123\r\n**xyz';
+	var tree = freetree.parse(str, {leadingChar: '*'});
+        assert.ok(tree.level == 0);
+	assert.ok(tree.value == 'abc');
+	assert.ok(tree.nodes.length == 2);
+	assert.ok(tree.nodes[0].nodes[0].value == '123');
+    });
 });
