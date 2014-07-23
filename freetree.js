@@ -3,6 +3,7 @@ var _settings = {
 };
 
 function parse(str, settings) {
+    config(settings);
     var lines = split(str);
     check(lines);
     return build(lines);
