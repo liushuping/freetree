@@ -35,8 +35,12 @@ function check(str) {
     checkRoot(str);
 }
 
+function escapeRegExp(string){
+  return string.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
+}
+
 function checkRoot(lines) {
-    var c = _settings.leadingChar,
+    var c = escapeRegExp(_settings.leadingChar),
 	firstTwoPattern = new RegExp('^' + c + '[^' + c + ']');
 	pattern = new RegExp('^' + c + '[^' + c + '].*$'),
 	roots = lines.filter(function(line) {
@@ -53,7 +57,7 @@ function checkRoot(lines) {
 }
 
 function parseLine(line) {
-    var c = _settings.leadingChar,
+    var c = escapeRegExp(_settings.leadingChar),
 	pattern = new RegExp('^(' + c + '+)' + '(.+)$'),
 	matches = line.match(pattern);
 
