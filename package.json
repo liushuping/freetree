@@ -23,4 +23,7 @@
     "url": "https://github.com/liushuping/freetree/issues"
   },
   "homepage": "https://github.com/liushuping/freetree"
+  "devDependencies": {
+    "mocha": "*"
+  }
 }
