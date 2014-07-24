@@ -3,6 +3,8 @@ freetree
 
 A node module for creating tree data structure from text input
 
+[![build status](https://travis-ci.org/liushuping/freetree.svg)](https://travis-ci.org/liushuping/freetree.svg)
+
 This module takes a simplified tree structured input string and build a JavaScript tree object in memory. 
 
 A simple tree structured input string (input.txt) example:
