@@ -31,6 +31,7 @@ var tree = freetree.parse(str, settings);
 ```
 **`settings`** has below listed properties
 * `leadingChar`: optional, defines leading character for the tree, defaulted to '#' 
+* `compact`: optional, output the object in compact mode.
 
 ## Code examples
 Prepare an `input.txt` file as above demonstrated.
