@@ -41,25 +41,37 @@ var freetree = require('freetree');
 var str = fs.readFileSync('input.txt', 'utf8');
 var tree = freetree.parse(str);
 ```
-then, the `tree` object is an in-memory JavaScript tree object. In this example, the object is in structure:
+then, the `tree` object is an in-memory JavaScript object. In this example, the object is in structure:
 ```JavaScript
 {
- "level":0,
- "value":"root",
- "nodes":[{
-	    "level":1,
-	    "value":"node1",
-	    "nodes":[{
-		       "level":2,
-	   	       "value":"node11"
-		    }]
-	  },
-	  {
-	    "level":1,
-	    "value":"node2"
-	  }]
+    "level": 0,
+    "value": "root",
+    "nodes": [{
+        "level": 1,
+        "value": "node1",
+        "nodes": [{
+            "level": 2,
+            "value": "node11"
+        }]
+    }, {
+        "level": 1,
+        "value": "node2"
+    }]
 }
 ```
+If the `compact` option is set to `true`, the object will be compressed in below structure:
+```javascript
+{
+    "root": [{
+        "node1": [{
+            "node11": null
+        }]
+    }, {
+        "node2": null
+    }]
+}
+```
+
 ## Test
 Make sure `mocha` is installed globally
 ```
