@@ -35,14 +35,14 @@ var tree = freetree.parse(str, settings);
 
 ## Code examples
 Prepare an `input.txt` file as above demonstrated.
-```JavaScript
+```javascript
 var fs = require('fs');
 var freetree = require('freetree');
 var str = fs.readFileSync('input.txt', 'utf8');
 var tree = freetree.parse(str);
 ```
 then, the `tree` object is an in-memory JavaScript object. In this example, the object is in structure:
-```JavaScript
+```javascript
 {
     "level": 0,
     "value": "root",
